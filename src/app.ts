@@ -3,6 +3,7 @@ import cors from "cors"
 import movieRoutes from "./routes/movies"
 import seriesRoutes from "./routes/series"
 import peopleRoutes from "./routes/people"
+import searchRoutes from "./routes/search"
 
 export const app = express()
 
@@ -21,5 +22,6 @@ app.use(
 )
 app.use(express.json())
 app.use("/api/movies", movieRoutes)
-app.use("/api/series", seriesRoutes)
 app.use("/api/people", peopleRoutes)
+app.use("/api/search", searchRoutes)
+app.use("/api/series", seriesRoutes)
