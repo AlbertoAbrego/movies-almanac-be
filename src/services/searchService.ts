@@ -15,4 +15,15 @@ export const searchService = {
         })
         return response.data
     },
+    async getSearchMulti(querySearch: string) {
+        const response = await axios.get(`${BASE_URL}/search/multi`, {
+            params: {
+                api_key: config.movieApiKey,
+                query: querySearch,
+                language: "en-US",
+                page: 1,
+            },
+        })
+        return response.data
+    },
 }
